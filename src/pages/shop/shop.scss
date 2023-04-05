@@ -1,0 +1,50 @@
+.shop {
+  padding: 10px 0;
+  margin: 100px 0;
+  &__title {
+    font-size: 2rem;
+    text-transform: capitalize;
+  }
+
+  &__wrapper {
+    padding: 10px 0;
+    .shop__wrapper__item {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+
+      @media (max-width: 700px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .shop__content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .filter__img {
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: all 0.5s ease-in-out;
+      filter: grayscale(100%);
+
+      &:hover {
+        filter: grayscale(0%);
+      }
+    }
+  }
+
+  .filter__img:hover img {
+    transform: scale(1.5);
+  }
+}
